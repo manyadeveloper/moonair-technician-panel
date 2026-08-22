@@ -1,0 +1,58 @@
+import type { Notification } from "@/types/notification";
+
+export const notifications: Notification[] = [
+  {
+    id: "notif-001",
+    type: "service_assigned",
+    title: "New Service Assigned",
+    message: "Service request SR-2026-00124 has been assigned to you.",
+    read: false,
+    service_request_id: "sr-001",
+    created_at: "2026-08-22T05:00:00Z",
+  },
+  {
+    id: "notif-002",
+    type: "urgent_service",
+    title: "Urgent Service",
+    message: "SR-2026-00118 requires immediate attention — motor issue in New Delhi.",
+    read: false,
+    service_request_id: "sr-002",
+    created_at: "2026-08-22T07:30:00Z",
+  },
+  {
+    id: "notif-003",
+    type: "schedule_changed",
+    title: "Schedule Changed",
+    message: "SR-2026-00087 rescheduled to 23 Aug 2026.",
+    read: true,
+    service_request_id: "sr-005",
+    created_at: "2026-08-21T16:00:00Z",
+  },
+  {
+    id: "notif-004",
+    type: "service_reminder",
+    title: "Service Reminder",
+    message: "You have 4 service visits scheduled for today.",
+    read: true,
+    service_request_id: null,
+    created_at: "2026-08-22T06:00:00Z",
+  },
+  {
+    id: "notif-005",
+    type: "parts",
+    title: "Parts Required",
+    message: "Pump assembly MHV-PUMP-140 needed for SR-2026-00072.",
+    read: false,
+    service_request_id: "sr-006",
+    created_at: "2026-08-21T14:00:00Z",
+  },
+  {
+    id: "notif-006",
+    type: "system",
+    title: "System Update",
+    message: "MoonAir Service Panel maintenance scheduled tonight 11 PM–12 AM.",
+    read: true,
+    service_request_id: null,
+    created_at: "2026-08-20T18:00:00Z",
+  },
+];

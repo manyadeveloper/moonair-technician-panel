@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand dark */
+  --brand-dark: #111111;
+  --brand-dark-secondary: #181818;
+
+  /* Layout surfaces */
+  --background: #f6f7f8;
+  --foreground: #111827;
+  --heading: #111827;
+  --sidebar: #151515;
+  --sidebar-hover: #222222;
+  --sidebar-active: #292929;
+  --sidebar-foreground: #ffffff;
+  --card: #ffffff;
+  --card-hover: #fafafa;
+
+  /* Borders */
+  --border: #e5e7eb;
+  --border-input: #d1d5db;
+
+  /* Text */
+  --text-secondary: #4b5563;
+  --muted: #6b7280;
+  --muted-light: #9ca3af;
+
+  /* Accent */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #dbeafe;
+
+  /* Semantic */
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #2563eb;
+
+  /* Status badge backgrounds */
+  --badge-completed-bg: #dcfce7;
+  --badge-completed-text: #166534;
+  --badge-pending-bg: #fef3c7;
+  --badge-pending-text: #92400e;
+  --badge-in-progress-bg: #dbeafe;
+  --badge-in-progress-text: #1e40af;
+  --badge-urgent-bg: #fee2e2;
+  --badge-urgent-text: #991b1b;
+  --badge-neutral-bg: #f3f4f6;
+  --badge-neutral-text: #374151;
+
+  /* Table */
+  --table-header-bg: #f9fafb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-heading: var(--heading);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-hover: var(--sidebar-hover);
+  --color-sidebar-active: var(--sidebar-active);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-border: var(--border);
+  --color-border-input: var(--border-input);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+  --color-table-header: var(--table-header-bg);
+  --font-sans: var(--font-inter);
+  --radius-sm: 6px;
+  --radius-md: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
 }
